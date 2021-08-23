@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900&display=swap');/*imports font, sizes and display*/
+*/*apply to all*/
+{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-seriff;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    align-items: center;
+    background: hsl(195, 53%, 79%);
+    background: linear-gradient(45deg, hsl(195, 90%, 50%) 0%,  hsl(195, 30%, 50%) 50%, hsl(195, 10%, 100%) 100%);
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh; /*vh = viewport-height*/
+}
+.container
+{
+    background: #ffff;
+    border: 4px solid black;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 6px 2fr;
+    margin: 50px;
+    max-width: 1000px;
+    min-height: 1000px;
+    position: relative;
+    width: 100%;
+}
+.container .left_Side
+{
+    background: #003147;
+    padding: 40px;
+    position: relative;
+}
+.profileText
+{
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /*horizontal line*/
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    position: relative;
+}
+.profileText .imageBox
+{
+    border-radius: 50px;
+    height: 200px;
+    overflow: hidden; /*chanve cover of image box*/
+    position: relative;
+    width: 200px;
+}
+.profileText .imageBox img
+{
+    border-radius: 50%;
+    border: 4px solid black;
+    /*clip-path: circle(50% at 50% 50%); /*changes image*/
+    height: 100%;
+    left: 0;
+    object-fit: cover; /*image cover*/
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.profileText h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.4em; /*estilize font*/
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase; /*change letters below photo*/
+}
+.profileText h2 span
+{
+    font-size: 0.8em; /*change subtitle font size*/
+    font-weight: 300;
+
+}
+.contactInfo
+{
+    padding-top: 40px;
+}
+.title
+{
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.contactInfo ul
+{
+    position: relative;
+}
+.contactInfo ul li
+{
+    cursor: pointer;
+    list-style: none;
+    margin: 10px 0;
+    position: relative;
+}
+.contactInfo ul li .icon
+{
+    color: #03a9f4;
+    display: inline-block;
+    font-size: 18px;
+    width: 30px;
+}
+.contactInfo ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.Education li
+{
+    margin-bottom: 15px;
+}
+.contactInfo.Education h5
+{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactInfo.Education h4:nth-child(2)
+{
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.Education h4
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.Languages .percent /*darkens the line*/
+{
+    background: #081921;
+    display: block;
+    height: 6px;
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+}
+.contactInfo.Languages .percent div /*affects the fullness of the line*/
+{
+    background: #03a9f4;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.vertical
+{
+    border-left: 6px solid black;  
+    height: 100%;
+    z-index: 100;
+}
+.container .right_Side
+{
+    background: #fff;
+    padding: 40px;
+    position: relative;
+}
+.about
+{
+    margin-bottom: 50px;
+}
+.about:last-child /*selects n-th part of about to change*/
+{
+    margin-bottom: 0;
+}
+.title2 /*applies chages to title2*/
+{
+    color: #003147;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.title2::before
+{
+    background: black;
+    clip-path: polygon(0 0, 0 100%, 50% 50%);
+    content: "";
+    height: 30px;
+    left: -5px;
+    position: absolute;
+    width: 70px;
+}
+p /*Change color of paragraph*/
+{
+    color: #333;
+}
+.about .box /*applies changes to about box*/
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company /*applies changes to about box year_company*/
+{
+    min-width: 150px;
+}
+.about .box .year_company h5 /*applies changes to about box year_company h5*/
+{
+    color: #848c90;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.about .box .text h4 /*applies changes to about box year_company h4*/
+{
+    color: #2a7da2;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.skills .box /*applies changes to skills box*/
+{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.skills .box h4 /*applies changes to skills box h4*/
+{
+    color: #848c99;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.skills .box .percent /*creates a bar besides skills box*/
+{
+    background: #f0f0f0;
+    height: 10px;
+    position: relative;
+    width: 100%;
+}
+.skills .box .percent div /*affects fullnes of the bar*/
+{
+    background: #03a3f4;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.interests ul /*affects visualization of interests*/
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interests ul li /*affects color of letters*/
+{
+    font-weight: 500;
+    list-style: none;
+    margin: 10px 0;
+}
+.interests ul li .fas /*affects icon color*/
+{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+@media (max-width: 1000px)
+{
+    .container
+    {
+        margin: 10px;
+        max-width: 60%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .interests ul
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .title2::before
+    {
+        display: none;
+    }
+}
+@media (max-width: 600px)
+{
+    body
+    {
+        justify-content: center;
+    }
+    .container
+    {
+        margin: 0;
+        max-width: 90vw;
+    }
+    .container .left_Side
+    {
+        padding: 10px;
+        max-width: 100%;
+    }
+    .about .box
+    {
+        flex-direction: column;
+    }
+    .about .box .year_company
+    {
+        margin-bottom: 5px;
+    }
+    .interests ul
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skills .box
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
